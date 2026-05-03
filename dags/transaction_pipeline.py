@@ -42,3 +42,5 @@ with DAG(
     task_id='load_to_redshift',
     python_callable=load_to_redshift
   )
+
+ extract_task >> transform_task >> load_task
